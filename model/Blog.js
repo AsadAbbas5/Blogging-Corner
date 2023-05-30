@@ -2,18 +2,21 @@ const mongoose = require('mongoose');
 
 // Define the Blog schema
 const blogSchema = new mongoose.Schema({
-  title: {
+  blogTitle: {
     type: String,
     required: true
   },
-  content: {
+  blogContent: {
     type: String,
-    required: true
+    equired: true
   },
-  author: {
+  blogAuthor: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
+  },
+  blogImge:{
+    type:sting
   },
   createdAt: {
     type: Date,
